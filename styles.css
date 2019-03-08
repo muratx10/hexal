@@ -38,8 +38,28 @@ header:before {
     transform: translateX(-50%);
 }
 
-header span {
+.triangle-logo {
     padding: 28px 12px 16px 14px;
+}
+
+.triangle-logo:before {
+    content: '';
+    width: 410px;
+    height: 1px;
+    background-color: #e4e9eb;
+    position: absolute;
+    top: 117%;
+    right: 57.1%;
+}
+
+.triangle-logo:after {
+    content: '';
+    width: 410px;
+    height: 1px;
+    background-color: #e4e9eb;
+    position: absolute;
+    top: 117%;
+    left: 57.1%;
 }
 
 .navbar {
