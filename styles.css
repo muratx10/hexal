@@ -1,16 +1,17 @@
 @font-face {
-	font-family: 'MavenPro-Regular';
-	src: url('./assets/fonts/MavenPro-Regular.eot');
-	src: local('☺'), url('./assets/fonts/MavenPro-Regular.woff') format('woff'), url('./assets/fonts/MavenPro-Regular.ttf') format('truetype'), url('./assets/fonts/MavenPro-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'MavenPro-Regular';
+    src: url('./assets/fonts/MavenPro-Regular.eot');
+    src: local('☺'), url('./assets/fonts/MavenPro-Regular.woff') format('woff'), url('./assets/fonts/MavenPro-Regular.ttf') format('truetype'), url('./assets/fonts/MavenPro-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-	font-family: 'Lato-Regular';
-	src: url('./assets/fonts/Lato-Regular.eot');
-	src: local('☺'), url('./assets/fonts/Lato-Regular.woff') format('woff'), url('./assets/fonts/Lato-Regular.ttf') format('truetype'), url('./assets/fonts/Lato-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Lato-Regular';
+    src: url('./assets/fonts/Lato-Regular.eot');
+    src: local('☺'), url('./assets/fonts/Lato-Regular.woff') format('woff'), url('./assets/fonts/Lato-Regular.ttf') format('truetype'), url('./assets/fonts/Lato-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 header {
@@ -28,9 +29,9 @@ header {
 header:before {
     content: '';
     width: 0;
-	height: 0;
-	border-left: 45px solid transparent;
-	border-right: 45px solid transparent;
+    height: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
     border-top: 26px solid #323232;
     position: absolute;
     top: 100%;
@@ -64,15 +65,25 @@ header:before {
 
 .navbar {
     padding: 20px 17px 10px 21px;
-    color: #fff;
     transform: scaleX(0.979);
     letter-spacing: -0.003em;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    /* transition: 0.3s; */
 }
 
 .navbar li {
     display: inline-flex;
     list-style-type: none;
     padding: 5px;
+}
+
+.navbar li:hover a {
+    color: #2eb398;
+    transition: 0.3s;
 }
 
 .dot {
@@ -85,3 +96,131 @@ header:before {
     position: relative;
     top: -2px;
 }
+
+main {
+    max-width: 1024px;
+    margin: 90px auto;
+}
+
+.portfolio {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 994px;
+}
+
+.portfolio__item {
+    width: 180px;
+    height: 206px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.portfolio__item:hover .hexagon-img img {
+    transform: scale(1.3);
+    transition: 0.2s;
+}
+
+.portfolio__item:nth-child(4n+5) {
+    margin-left: 7px;
+}
+
+.portfolio__item:nth-child(n+5) {
+    margin-top: -42px;
+}
+
+.hexagon-first-layer {
+    width: 180px;
+    height: 300px;
+    overflow: hidden;
+    visibility: hidden;
+    transform: rotate(120deg);
+    position: absolute;
+    top: -47px;
+}
+
+.hexagon-second-layer {
+    overflow: hidden;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+}
+
+.hexagon-img {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    transform: rotate(-60deg);
+}
+
+.hexagon-img img {
+    position: absolute;
+    top: 35px;
+    right: -20px;
+    transition: 0.3s;
+}
+
+
+
+/* .hexagon:before {
+	content: "";
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 90px solid #fff;
+	border-right: 90px solid #fff;
+    border-bottom: 51px solid transparent;
+    z-index: 2;
+    
+}
+.hexagon:after {
+	content: "";
+	position: absolute;
+	bottom: 0; 
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 90px solid #fff;
+	border-right: 90px solid #fff;
+    border-top: 51px solid transparent;
+    z-index: 2;
+}
+
+.hexagon img {
+    width: 123%;
+    height: 107.5%;
+    position: relative;
+    right: 22px;
+    top: -11px;
+}
+
+main {
+    display: flex;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.portfolio-block {
+    max-width: 1024px;
+    margin: 0 auto;
+    border: red solid thin;
+}
+
+.row {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    /* border: 1px solid blue; */
+/* }
+
+.row:nth-child(even) {
+    position: relative;
+    top: -20px;
+    z-index: -3;
+} */
