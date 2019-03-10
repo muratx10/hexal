@@ -303,7 +303,10 @@ main p {
     hyphens: auto;
     word-break: break-all;
     text-align: justify;
-    /* letter-spacing: -0.007em; */
+}
+
+article {
+    position: relative;
 }
 
 .col-1,
@@ -395,6 +398,7 @@ main p {
 footer {
     background-color: #323232;
     margin-top: -90px;
+    position: relative;
 }
 .feedback {
     font-family: 'MavenPro-Regular', sans-serif;
@@ -455,7 +459,7 @@ footer {
  .container-2 {
     display: flex;
     width: 796px;
-    margin: 68px auto;
+    margin: 68px auto 0;
     position: relative;
     padding: 50px 0px 0 15px;
  }
@@ -519,3 +523,34 @@ footer {
      margin-right: 10px;
      font-size: 14px;
  }
+
+ .copyright {
+    background-color: #222222;
+    margin: 0;
+    padding: 2px 20px;
+    color: #454545;
+    font-family: 'Lato-Regular', sans-serif;
+    height: 43px;
+ }
+
+ footer:before {
+     content: '';
+     width: 960px;
+     height: 1px;
+     display: inline-block;
+     background-color: #2b2b2b;
+     position: absolute;
+     top: 12px;
+     left: 34px;
+ }
+
+ footer:after {
+    content: '';
+    width: 960px;
+    height: 1px;
+    display: inline-block;
+    background-color: #2b2b2b;
+    position: absolute;
+    bottom: 12px;
+    left: 34px;
+}
