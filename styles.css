@@ -72,7 +72,6 @@ header:before {
 .navbar a {
     text-decoration: none;
     color: #fff;
-    /* transition: 0.3s; */
 }
 
 .navbar li {
@@ -84,6 +83,11 @@ header:before {
 .navbar li:hover a {
     color: #2eb398;
     transition: 0.3s;
+}
+
+.navbar li:active {
+    transform: scale(0.8);
+    transition: 0.2s;
 }
 
 .dot {
@@ -402,9 +406,7 @@ footer {
 }
 .feedback {
     font-family: 'MavenPro-Regular', sans-serif;
-    /* width: 100%; */
     background-color: #323232;
-
 }
 
 .feedback * {
@@ -424,6 +426,12 @@ footer {
     padding: 0 0 0 15px;
     color: #bebebe;
     font-size: 12px;
+}
+
+.feedback input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(54, 178, 152, 1);
+    transition: 0.2s;
 }
 .feedback p {
     color: #bebebe;
@@ -456,6 +464,12 @@ footer {
     font-size: 12px;
  }
 
+ .feedback textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(54, 178, 152, 1);
+    transition: 0.2s;
+ }
+
  .container-2 {
     display: flex;
     width: 796px;
@@ -479,6 +493,11 @@ footer {
      background-color: #d7fcf5;
      color: #2eb398;
      transition: 0.2s;
+ }
+
+ #submit:active {
+     font-size: 20px;
+     transform: scale(0.8);
  }
 
  .contacts {
